@@ -34,9 +34,9 @@ export const Howitworks = () => {
   return (
     <div className='p-10 flex flex-col gap-10'>
       <div className='text-2xl text-center font-semibold p-5'>HOW IT WORKS</div>
-      <div className='flex gap-12 justify-center items-center'>
+      <div className='flex flex-col md:flex-row gap-12 justify-center items-center'>
         {cards.map((card, index) => (
-          <Card className='w-1/4 text-center'>
+          <Card className='w-full md:w-1/4 text-center'>
           <CardHeader>
             <CardTitle>Card Title</CardTitle>
             <CardDescription>Card Description</CardDescription>
