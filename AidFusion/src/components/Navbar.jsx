@@ -16,15 +16,6 @@ export const Navbar = () => {
 
     const toggle = () => {
         setIsToggled(!isToggled);
-        if (isToggled) {
-            // Logic when the toggle is ON
-            console.log('Toggled ON');
-            // Perform actions for ON state
-        } else {
-            // Logic when the toggle is OFF
-            console.log('Toggled OFF');
-            // Perform actions for OFF state
-        }
     };
     return (
         <>
@@ -53,22 +44,29 @@ export const Navbar = () => {
                         {isToggled ? 'Open' : 'Close'}
                     </Button>
                 </div>
-
-                {isToggled && (
-                    <div className='text-center md:text-left md:w-1/2'>
-                        <ul className='flex flex-col md:flex-row md:justify-around md:items-center'>
-                            <li>About Us</li>
-                            <li>How it Works</li>
-                            <li>Contact us</li>
-                        </ul>
-                    </div>
-                )}
                 <div className='text-xl text-center'>AidFusion</div>
-
                 <div className='text-center'>
                     <Button variant="outline" className="bg-accent border-0">Sign Up</Button>
                 </div>
             </div>
+            {isToggled && (
+                    <div className='text-center bg-secondary text-lg p-4 w-[70%] h-full absolute top-0 text-primary'>
+                        <div className='flex'>
+                    <Button
+                        variant="outline"
+                        className={`bg-accent border-0 ${isToggled ? 'bg-green-500' : 'bg-red-500'}`}
+                        onClick={toggle}
+                    >
+                        {isToggled ? 'Open' : 'Close'}
+                    </Button>
+                </div>
+                        <ul className='flex flex-col items-center gap-5 py-6'>
+                            <li className='border-transparent border-b-2 hover:border-b-2 hover:border-primary'>About Us</li>
+                            <li className='border-transparent border-b-2 hover:border-b-2 hover:border-primary'>How it Works</li>
+                            <li className='border-transparent border-b-2 hover:border-b-2 hover:border-primary'>Contact us</li>
+                        </ul>
+                    </div>
+                )}
         </>
     )
 }
