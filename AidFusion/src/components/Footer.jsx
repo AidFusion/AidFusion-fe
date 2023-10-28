@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className='flex justify-evenly gap-10 md:gap-14'>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>Mobile App</div>
-          <ul className='gap-1'>
+          <ul className=''>
             <li>
               <Link to="">Download the App</Link>
             </li>
@@ -17,8 +17,30 @@ export const Footer = () => {
           </ul>
         </div>
         <div className='flex flex-col gap-2'>
+          <div className='font-semibold text-xl'>Privacy & Terms</div>
+          <ul className=''>
+          <li>
+              <Link to="">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="">Terms odf Service</Link>
+            </li>
+            <li>
+              <Link to="">Cookies Policy</Link>
+            </li>
+            <li>
+              <Link to="">Data Protection</Link>
+            </li>
+            <li>
+              <Link to="">Code of Conduct</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className='flex justify-evenly gap-10 md:gap-14'>
+        <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>About us</div>
-          <ul className='gap-1'>
+          <ul className=''>
             <li>
               <Link to="">Our Team</Link>
             </li>
@@ -33,10 +55,9 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-      <div className='flex justify-evenly gap-10 md:gap-14'>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>Support & Resources</div>
-          <ul className='gap-1'>
+          <ul className=''>
             <li>
               <Link to="">Help Center</Link>
             </li>
@@ -55,27 +76,6 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-        <div className='flex flex-col gap-2'>
-          <div className='font-semibold text-xl'>Privacy & Terms</div>
-          <ul className='gap-1'>
-          <li>
-              <Link to="">Privacy Policy</Link>
-            </li>
-            <li>
-              <Link to="">Terms of Service</Link>
-            </li>
-            <li>
-              <Link to="">Cookies Policy</Link>
-            </li>
-            <li>
-              <Link to="">Data Protection</Link>
-            </li>
-            <li>
-              <Link to="">Code of Conduct</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   )
-}
+          }
