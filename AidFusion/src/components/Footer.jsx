@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className='flex justify-evenly gap-10 md:gap-14'>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>Mobile App</div>
-          <ul className=''>
+          <ul className='gap-1'>
             <li>
               <Link to="">Download the App</Link>
             </li>
@@ -18,7 +18,7 @@ export const Footer = () => {
         </div>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>About us</div>
-          <ul className=''>
+          <ul className='gap-1'>
             <li>
               <Link to="">Our Team</Link>
             </li>
@@ -35,7 +35,7 @@ export const Footer = () => {
         </div>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>Support & Resources</div>
-          <ul className=''>
+          <ul className='gap-1'>
             <li>
               <Link to="">Help Center</Link>
             </li>
@@ -57,7 +57,7 @@ export const Footer = () => {
       <div className='flex justify-evenly gap-10 md:gap-14'>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>Privacy & Terms</div>
-          <ul className=''>
+          <ul className='gap-1'>
           <li>
               <Link to="">Privacy Policy</Link>
             </li>
