@@ -33,6 +33,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
+      <div className='flex justify-evenly gap-10 md:gap-14'>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>Support & Resources</div>
           <ul className='gap-1'>
@@ -54,7 +55,6 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className='flex justify-evenly gap-10 md:gap-14'>
         <div className='flex flex-col gap-2'>
           <div className='font-semibold text-xl'>Privacy & Terms</div>
           <ul className='gap-1'>
