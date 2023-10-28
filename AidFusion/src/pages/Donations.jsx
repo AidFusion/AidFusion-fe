@@ -1,22 +1,31 @@
 // DonationHistory.js
-import React from 'react';
+import React, { useState } from 'react';
 import donationData from '@/components/donationData';// Import the mock donation data
 import Layout from '@/components/Layout';
 
+
 function Donations() {
+    const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredDonations = donationData.filter((donation) =>
+    donation.donor.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <div className="bg-primary">
         <Layout>
-      <div className="bg-white p-5">
-      <h1 className=''>Donation History</h1>
+      <div className="bg-white p-5 py-10 max-h-screen h-[73vh]">
+     <div className="flex flex-col gap-4 md:justify-between md:flex-row">
+     <h1 className=''>Donation History</h1>
+      <input
+        type="text"
+        placeholder="Search Donor..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="w-full md:w-1/2 p-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+      />
+     </div>
       <div className='py-5 flex justify-center'>
       <table className='w-full'>
-        {/* <thead>
-          <tr className='items-center flex gap-12'>
-            <th>Donation ID</th>
-            <th>Amount</th>
-          </tr>
-        </thead> */}
         <tbody>
           {donationData.map((donation) => (
             <tr key={donation.id} className='items-center flex justify-evenly w-full bg-slate-50 mb-4 border-b'>
