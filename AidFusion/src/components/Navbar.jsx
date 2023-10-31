@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-scroll'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -24,9 +25,46 @@ export const Navbar = () => {
                 <div className='text-xl'>AidFusion</div>
                 <div className='w-1/2'>
                     <ul className='flex flex-row justify-around'>
-                        <li>About Us</li>
-                        <li>How it Works</li>
-                        <li>Contact us</li>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
+                        >
+                            About Us
+                        </Link>
+                        <Link
+                            activeClass="active"
+                            to="how-it-works"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
+                        >
+                            How it Works
+                        </Link>
+                        <Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
+                        >
+                            Contact us
+                        </Link>
+                        <Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
+                        >
+                            Testimonials
+                        </Link>
                     </ul>
                 </div>
                 <div>
@@ -50,23 +88,64 @@ export const Navbar = () => {
                 </div>
             </div>
             {isToggled && (
-                    <div className='text-center bg-secondary text-lg p-4 w-[70%] h-full absolute top-0 text-primary'>
-                        <div className='flex'>
-                    <Button
-                        variant="outline"
-                        className={`bg-accent border-0 ${isToggled ? 'bg-green-500' : 'bg-red-500'}`}
-                        onClick={toggle}
-                    >
-                        {isToggled ? 'Open' : 'Close'}
-                    </Button>
-                </div>
-                        <ul className='flex flex-col items-center gap-5 py-6'>
-                            <li className='border-transparent border-b-2 hover:border-b-2 hover:border-primary'>About Us</li>
-                            <li className='border-transparent border-b-2 hover:border-b-2 hover:border-primary'>How it Works</li>
-                            <li className='border-transparent border-b-2 hover:border-b-2 hover:border-primary'>Contact us</li>
-                        </ul>
+                <div className='text-center bg-secondary text-lg p-4 w-[70%] h-full absolute top-0 text-primary'>
+                    <div className='flex'>
+                        <Button
+                            variant="outline"
+                            className={`bg-accent border-0 ${isToggled ? 'bg-green-500' : 'bg-red-500'}`}
+                            onClick={toggle}
+                        >
+                            {isToggled ? 'Open' : 'Close'}
+                        </Button>
                     </div>
-                )}
+                    <ul className='flex flex-col items-center gap-5 py-6'>
+                        <Link
+                            onClick={toggle}
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
+                        >
+                            About Us
+                        </Link>
+                        <Link
+                            onClick={toggle}
+                            activeClass="active"
+                            to="how-it-works"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
+                        >
+                            How it Works
+                        </Link>
+                        <Link
+                            onClick={toggle}
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
+                        >
+                            Contact us
+                        </Link>
+                        <Link
+                            onClick={toggle}
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
+                        >
+                            Testimonials
+                        </Link>
+                    </ul>
+                </div>
+            )}
         </>
     )
 }

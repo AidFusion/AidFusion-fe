@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button } from './ui/button'
 
-export const Hero = () => {
+export const Hero = ({sectionId}) => {
   return (
-    <div className='p-10 bg-white justify-between'>
+    <div className='p-10 bg-white justify-between' id={sectionId}>
       <div className='flex flex-col gap-10'>
         <div className='gap-4 flex flex-col'>
         <p className='text-4xl'>LOREM IPSUM DoLOR SIT AMET.</p> 

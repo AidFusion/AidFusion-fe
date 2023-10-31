@@ -3,9 +3,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Input } from "@/components/ui/input"
 import { Button } from './ui/button';
 
-export const Contact = () => {
+export const Contact = ({sectionId}) => {
     return (
-        <div className='bg-secondary text-white p-10 flex flex-col md:flex-row gap-10'>
+        <div className='bg-secondary text-white p-10 flex flex-col md:flex-row gap-10' id={sectionId}>
             <div className='md:text-left md:w-1/2'>
                 <h1 className='text-4xl font-semibold'>Contact Us</h1>
                 <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ducimus, delectus officia corporis architecto magnam veritatis velit aspernatur quia modi eius iusto ipsum deserunt? Accusamus id neque deserunt quas distinctio!</div>

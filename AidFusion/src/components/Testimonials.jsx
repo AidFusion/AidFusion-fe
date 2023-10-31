@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from './ui/button';
 
-export const Testimonials = () => {
+export const Testimonials = ({sectionId}) => {
   const cards = [
     {
       title: "Card Title 1",
@@ -88,7 +88,7 @@ export const Testimonials = () => {
   }, []);
 
   return (
-    <div className="py-10 px-2 md:p-10 flex flex-col gap-10">
+    <div className="py-10 px-2 md:p-10 flex flex-col gap-10" id={sectionId}>
       <div className="text-2xl text-center font-semibold p-5">TESTIMONIALS</div>
       <div className="flex md:gap-12 gap-6 items-center relative">
         <Button variant="icon" className="scroll-button left hidden md:block rounded-full bg-secondary text-white" onClick={scrollLeft}>&lt;</Button>

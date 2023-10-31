@@ -7,16 +7,22 @@ import { Contact } from '@/components/Contact';
 import Layout from '@/components/Layout';
 
 
-export const Home = () => {
+export const Home = ({sectionId}) => {
+  // const scrollToSection = (sectionId) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
   return (
     <div className='bg-primary'>
       <Layout>
         <div className=''>
-          <Hero />
-          <About />
-          <Howitworks />
-          <Testimonials />
-          <Contact />
+          <Hero sectionId="hero" />
+          <About sectionId="about" />
+          <Howitworks sectionId="how-it-works" />
+          <Testimonials sectionId="testionials" />
+          <Contact sectionId="contact" />
         </div>
       </Layout>
     </div>

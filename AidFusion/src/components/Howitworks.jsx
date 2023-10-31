@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export const Howitworks = () => {
+export const Howitworks = ({sectionId}) => {
   const cards = [
     {
       title: "Card Title",
@@ -32,7 +32,7 @@ export const Howitworks = () => {
   ]
 
   return (
-    <div className='p-10 flex flex-col gap-10'>
+    <div className='p-10 flex flex-col gap-10' id={sectionId}>
       <div className='text-2xl text-center font-semibold p-5'>HOW IT WORKS</div>
       <div className='flex flex-col md:flex-row gap-12 justify-center items-center'>
         {cards.map((card, index) => (
