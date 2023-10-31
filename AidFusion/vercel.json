@@ -1,27 +1,62 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "AidFusion/src",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm run build"
+      }
+    }
+  ],
   "rewrites": [
-    { "source": "/donation-history", "destination": "/donation-history" },
-    { "source": "/donate", "destination": "/donate" },
-    { "source": "/donation-payment", "destination": "/donation-payment" },
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/donation-history",
+      "destination": "/donation-history"
+    },
+    {
+      "source": "/donate",
+      "destination": "/donate"
+    },
+    {
+      "source": "/donation-payment",
+      "destination": "/donation-payment"
+    },
+    {
+      "source": "/donation-payment/*",
+      "destination": "/donation-payment"
+    },
+    {
+      "source": "/:any*",
+      "destination": "/"
+    }
   ],
   "headers": [
     {
       "source": "/donation-history",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/donate",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/donation-payment",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     }
   ],
