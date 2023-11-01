@@ -61,5 +61,5 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": "remove"
+  "trailingSlash": true
 }
