@@ -63,3 +63,7 @@
   "cleanUrls": true,
   "trailingSlash": true
 }
+{
+  "buildCommand": "npm run build",
+  "cleanUrls": true
+}
