@@ -13,10 +13,6 @@
       "destination": "/donation-payment"
     },
     {
-      "source": "/donation-payment/*",
-      "destination": "/donation-payment"
-    },
-    {
       "source": "/:any*",
       "destination": "/"
     },
