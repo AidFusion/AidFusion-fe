@@ -19,7 +19,11 @@
     {
       "source": "/:any*",
       "destination": "/"
-    }
+    },
+    {
+      "source": "/(.*)",
+    "destination": "/" 
+  }
   ],
   "headers": [
     {
