@@ -84,7 +84,9 @@ export const Navbar = () => {
                 </div>
                 <div className='text-xl text-center'>AidFusion</div>
                 <div className='text-center'>
-                    <Button variant="outline" className="bg-accent border-0">Sign Up</Button>
+                    <Button variant="outline" className="bg-accent border-0">
+                        <Link to="/sign-up">Sign Up</Link>
+                    </Button>
                 </div>
             </div>
             {isToggled && (
