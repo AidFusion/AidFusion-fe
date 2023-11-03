@@ -12,14 +12,14 @@ export const Signup = () => {
             <div className="flex flex-row mt-4">
                 <Button
                     variant="outline"
-                    className={`rounded-none focus:bg-txtSecondary focus:text-white text-lg font-normal text-black cursor-pointer active:bg-txtSecondary ${activeTab === 'beneficiary' ? 'active-tab' : ''}`}
+                    className={`rounded-none focus:bg-txtSecondary focus:text-white text-black cursor-pointer active:bg-txtSecondary ${activeTab === 'beneficiary' ? 'active-tab' : ''}`}
                     onClick={() => handleTabChange('beneficiary')}
                 >
                     Beneficiary
                 </Button>
                 <Button
                     variant="outline"
-                    className={`rounded-none focus:bg-txtSecondary focus:text-white text-lg font-normal text-black active:bg-txtSecondary cursor-pointer ${activeTab === 'restaurant' ? 'active-tab' : ''}`}
+                    className={`rounded-none focus:bg-txtSecondary focus:text-white text-black active:bg-txtSecondary cursor-pointer ${activeTab === 'restaurant' ? 'active-tab' : ''}`}
                     onClick={() => handleTabChange('restaurant')}
                 >
                     Restaurant
