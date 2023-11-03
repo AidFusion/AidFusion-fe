@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import React from 'react'
 import { useState } from 'react'
@@ -148,14 +148,6 @@ export const Signup = () => {
                                 <Button variant="outline" className="bg-txtSecondary text-white cursor-pointer">Sign Up with Phone Number</Button>
                             </CardContent>
                         </Card>
-
-                        <div >
-                            <label htmlFor="" ></label>
-
-
-
-
-                        </div>
                     </div>
                 </Layout>
             </div>

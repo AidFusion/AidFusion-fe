@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home';
+import { DashHome } from './dashboard/pages/DashHome';
 import DonationHistory from './pages/Donations';
 import { Donate } from './pages/Donate';
 import { Payment } from './pages/Payment';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/sign-up' element={<Signup />} />
         <Route path='/log-in' element={<Login />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
+        <Route path="/dashboard" element={<DashHome />} />
       </Routes>
     </BrowserRouter>
   );
