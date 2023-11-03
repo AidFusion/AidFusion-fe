@@ -12,6 +12,7 @@ import {
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { Button } from './ui/button'
+import { Menu, MenuIcon, X } from 'lucide-react'
 
 export const Navbar = () => {
     const [isToggled, setIsToggled] = useState(false);
@@ -79,10 +80,9 @@ export const Navbar = () => {
                 <div className='flex'>
                     <Button
                         variant="outline"
-                        className={`bg-accent border-0 ${isToggled ? 'bg-green-500' : 'bg-red-500'}`}
-                        onClick={toggle}
+                        onClick={toggle} className="bg-transparent border-0"
                     >
-                        {isToggled ? 'Open' : 'Close'}
+                        {isToggled ? <X /> : <MenuIcon />}
                     </Button>
                 </div>
                 <div className='text-xl text-center'>AidFusion</div>
@@ -97,10 +97,10 @@ export const Navbar = () => {
                     <div className='flex'>
                         <Button
                             variant="outline"
-                            className={`bg-accent border-0 ${isToggled ? 'bg-green-500' : 'bg-red-500'}`}
+                            className="bg-transparent border-0"                      
                             onClick={toggle}
                         >
-                            {isToggled ? 'Open' : 'Close'}
+                            {isToggled ? <X /> : <Menu />}
                         </Button>
                     </div>
                     <ul className='flex flex-col items-center gap-5 py-6'>
