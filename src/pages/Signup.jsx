@@ -134,7 +134,7 @@ export const Signup = () => {
             <div className='bg-primary'>
                 <Layout>
                     <div className='p-5'>
-                        <Card className='bg-white px-10 py-5 md:w-2/3 flex flex-col gap-6 mx-auto justify-center'>
+                        <Card className='bg-white px-2 md:px-10 py-5 md:w-2/3 flex flex-col gap-6 mx-auto justify-center'>
                             <CardHeader>
                                 <CardTitle className='text-3xl font-bold'>Sign Up</CardTitle>
                                 <CardDescription>
