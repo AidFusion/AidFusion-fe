@@ -57,7 +57,7 @@ export const Signup = () => {
 
                     <Button variant="outline" className="bg-accent my-6 cursor-pointer" onClick={handleSignup}>Sign up</Button>
                     <div className='border-b border-txtSecondary flex justify-center mb-4'>
-                        <div className='absolute -mt-[0.8em] bg-white'>Already have an account? <span><Link to="/log-in" className="text-txtSecondary border-b border-b-transparent hover:border-b-txtPrimary">Log Inp</Link></span></div>
+                        <div className='absolute -mt-[0.8em] bg-white'>Already have an account? <span><Link to="/log-in" className="text-txtSecondary border-b border-b-transparent hover:border-b-txtPrimary">Log In</Link></span></div>
                     </div>
                 </>
             );
