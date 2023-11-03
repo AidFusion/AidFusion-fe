@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -68,7 +69,9 @@ export const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <Button variant="outline" className="bg-accent border-0">Sign Up</Button>
+                    <Button variant="outline" className="bg-accent border-0">
+                        <NavLink to="/sign-up">Sign Up</NavLink>
+                    </Button>
                 </div>
             </div>
             {/* //small screens and below */}
@@ -85,7 +88,7 @@ export const Navbar = () => {
                 <div className='text-xl text-center'>AidFusion</div>
                 <div className='text-center'>
                     <Button variant="outline" className="bg-accent border-0">
-                        <Link to="/sign-up">Sign Up</Link>
+                        <NavLink to="/sign-up">Sign Up</NavLink>   
                     </Button>
                 </div>
             </div>
