@@ -1,4 +1,5 @@
 import React from 'react'
+import { PlusCircle } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -11,8 +12,8 @@ import {
 export const Howitworks = ({sectionId}) => {
   const cards = [
     {
-      title: "Card Title",
-      description: "Card Description",
+      title: "Create an Account",
+      description: {PlusCircle},
       content: "Card Content",
       footer: "Card Footer",
     },
@@ -38,11 +39,13 @@ export const Howitworks = ({sectionId}) => {
         {cards.map((card, index) => (
           <Card className='w-full md:w-1/4 text-center'>
           <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            <CardTitle>{card.title}</CardTitle>
+            <CardDescription>
+              <img src={card.description} alt="" srcset="" />
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <p>Card Content</p>
+            <p>{card.content}</p>
           </CardContent>
         </Card>
         ))}

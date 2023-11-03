@@ -9,7 +9,9 @@ export const About = ({sectionId}) => {
           <img className='object-contain rounded-md' src="" alt="" />
         </div>
         <div className='md:w-[50%] w-full'>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempore culpa laboriosam veritatis! Incidunt, mollitia dolorem vitae debitis iste veritatis aliquam magni laboriosam, a expedita error culpa in inventore cupiditate?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda officiis, facere sint id, voluptate amet voluptatem tempore porro inventore sunt aspernatur commodi corporis quos dolorum aliquid harum, a numquam.lorem</div>
+          <div>AidFusion is a groundbreaking charitable food donation app that reimagines how we tackle food in security. At it's core, AidFusion's mission is to empower individuals and businesses to make a significant impact on the lives of less privileged inidividuals. <br /><br />
+          AidFusion operates on a unique model where donors contribute money, which is then channelled to registered restaurants. These restaurants, committed to supporting their communities, provide meals to registered users who are in need. What sets AidFusion apart is its use of QR Code technology for secure and transparent transactions. This ensures that donors have full confidence that their contributions are used exclusively for food support.
+          </div>
         </div>
       </div>
     </div>
