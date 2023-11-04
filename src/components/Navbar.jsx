@@ -27,7 +27,8 @@ export const Navbar = () => {
                 <div className='text-xl'>AidFusion</div>
                 <div className='w-1/2'>
                     <ul className='flex flex-row justify-around'>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/" className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
+                        >Home</NavLink>
                         <Link
                             activeClass="active"
                             to="about"
@@ -89,7 +90,7 @@ export const Navbar = () => {
                 <div className='text-xl text-center'>AidFusion</div>
                 <div className='text-center'>
                     <Button variant="outline" className="bg-accent border-0">
-                        <NavLink to="/sign-up">Sign Up</NavLink>   
+                        <NavLink to="/sign-up">Sign Up</NavLink>
                     </Button>
                 </div>
             </div>
@@ -98,13 +99,14 @@ export const Navbar = () => {
                     <div className='flex'>
                         <Button
                             variant="outline"
-                            className="bg-transparent border-0"                      
+                            className="bg-transparent border-0"
                             onClick={toggle}
                         >
                             {isToggled ? <X /> : <Menu />}
                         </Button>
                     </div>
                     <ul className='flex flex-col items-center gap-5 py-6'>
+                    <NavLink to="/" className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'>Home</NavLink>
                         <Link
                             onClick={toggle}
                             activeClass="active"

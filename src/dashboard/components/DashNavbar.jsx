@@ -22,7 +22,7 @@ export const DashNavbar = () => {
                         <Search className='border-0 mr-3 cursor-pointer text-secondary' />
                     </div>
                     <Button variant="outline" className="bg-accent hidden md:block border-0">
-                        <Link to="/">Log out</Link>
+                        <NavLink to="/">Log out</NavLink>
                     </Button>
                     <Bell className='hover:cursor-pointer hidden md:block hover:text-secondary' />
                     <div className='flex'>
