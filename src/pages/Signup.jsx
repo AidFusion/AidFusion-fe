@@ -48,7 +48,7 @@ export const Signup = () => {
                     </div>
                     <div className='flex flex-col gap-2'>
                         <label htmlFor="password">Password</label>
-                        <Input type="password" placeholder="Password" value={password} onChange={(e) => setPasswordPassword(e.target.value)} required />
+                        <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     </div>
                     <div className='flex flex-col gap-2'>
                         <label htmlFor="confirm password">Confirm Password</label>
@@ -74,7 +74,7 @@ export const Signup = () => {
                     </div>
                     <div className='flex flex-col gap-2'>
                         <label htmlFor="password">Password</label>
-                        <Input type="password" placeholder="Password" value={password} onChange={(e) => setPasswordPassword(e.target.value)} required />
+                        <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     </div>
                     <div className='flex flex-col gap-2'>
                         <label htmlFor="confirm password">Confirm Password</label>
@@ -110,6 +110,7 @@ export const Signup = () => {
             const newUser = {
                 firstName,
                 lastName,
+                resName,
                 email,
                 password,
             };

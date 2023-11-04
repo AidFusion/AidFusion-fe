@@ -1,5 +1,8 @@
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Bell, Home, LogOutIcon, Search, Settings, User2, UserCircle2, X } from 'lucide-react';
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll'
 
 export const DashNavbar = () => {
@@ -10,98 +13,52 @@ export const DashNavbar = () => {
     };
     return (
         <>
-            {/* //medium screens and above */}
-            <div className='py-4 px-5 gap-5 justify-between items-center hidden md:flex'>
-                <div className='text-xl'>AidFusion</div>
-                <div className='w-1/2'>
-                    <ul className='flex flex-row justify-around'>
-                        <Link
-                            activeClass="active"
-                            to="about"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
-                        >
-                            About Us
-                        </Link>
-                        <Link
-                            activeClass="active"
-                            to="how-it-works"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
-                        >
-                            How it Works
-                        </Link>
-                        <Link
-                            activeClass="active"
-                            to="contact"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
-                        >
-                            Contact us
-                        </Link>
-                        <Link
-                            activeClass="active"
-                            to="contact"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            className='cursor-pointer hover:text-secondary hover:border-b-secondary border-b-2 border-transparent'
-                        >
-                            Testimonials
-                        </Link>
-                    </ul>
-                </div>
-                <div>
-                    <Button variant="outline" className="bg-accent border-0">Sign Up</Button>
-                </div>
-            </div>
             {/* //small screens and below */}
-            <div className='py-4 px-5 gap-5 justify-between items-center flex md:hidden'>
-                <div className='flex'>
-                    <Button
-                        variant="outline"
-                        className={`bg-accent border-0 ${isToggled ? 'bg-green-500' : 'bg-red-500'}`}
-                        onClick={toggle}
-                    >
-                        {isToggled ? 'Open' : 'Close'}
-                    </Button>
-                </div>
+            <div className='py-4 px-5 gap-2 items-center flex justify-between'>
                 <div className='text-xl text-center'>AidFusion</div>
-                <div className='text-center'>
-                    <Button variant="outline" className="bg-accent border-0">
-                        <Link to="/sign-up">Sign Up</Link>
+                <div className='flex justify-around md:gap-5 lg:gap-0 lg:w-2/5 items-center'>
+                    <div className='flex items-center bg-white rounded-lg focus-within:border-secondary border'>
+                        <Input type="text" placeholder="Browse restaurants" className="focus-visible:ring-0 bg-transparent border-0 rounded-r-none focus-visible:ring-offset-0" />
+                        <Search className='border-0 mr-3 cursor-pointer text-secondary' />
+                    </div>
+                    <Button variant="outline" className="bg-accent hidden md:block border-0">
+                        <Link to="/">Log out</Link>
                     </Button>
-                </div>
-            </div>
-            {isToggled && (
-                <div className='text-center bg-secondary text-lg p-4 w-[70%] h-full absolute top-0 text-primary'>
+                    <Bell className='hover:cursor-pointer hidden md:block hover:text-secondary' />
                     <div className='flex'>
                         <Button
                             variant="outline"
-                            className={`bg-accent border-0 ${isToggled ? 'bg-green-500' : 'bg-red-500'}`}
+                            className='bg-transparent border-none hover:text-secondary hover:bg-transparent'
                             onClick={toggle}
                         >
-                            {isToggled ? 'Open' : 'Close'}
+                            {isToggled ? 'Open' :
+                                <div className='flex items-center gap-2'>
+                                    <UserCircle2 />
+                                    <div>User</div>
+                                </div>
+                            }
                         </Button>
                     </div>
-                    <ul className='flex flex-col items-center gap-5 py-6'>
-                        <Link
+                </div>
+            </div>
+            {isToggled && (
+                <div className='bg-secondary text-lg p-4 w-[70%] md:w-1/3 h-full absolute top-0 right-0 text-primary'>
+                    <div className='flex justify-between items-center'>
+                        <div className='flex items-center justify-evenly md:justify-normal md:gap-2 w-full md:px-6'>
+                            <div className='bg-primary rounded-full p-1 md:p-2 flex items-center border justify-center border-primary'>
+                                <UserCircle2 className='text-black' />
+                            </div>
+                            <div className='font-light text-sm md:text-lg'>Hello, FirstName!</div>
+                        </div>
+                        <Button
+                            variant="outline"
+                            className='border-0 bg-transparent hover:bg-transparent hover:text-white cursor-pointer'
                             onClick={toggle}
-                            activeClass="active"
-                            to="about"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
                         >
-                            About Us
-                        </Link>
+                            {isToggled ? <X /> : 'Close'}
+                        </Button>
+                    </div>
+                    <ul className='flex flex-col gap-5 p-6 lg:w-1/2'>
                         <Link
                             onClick={toggle}
                             activeClass="active"
@@ -109,9 +66,22 @@ export const DashNavbar = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
-                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
+                            className='cursor-pointer border-b-2 border-transparent hover:bg-primary hover:text-secondary items-center p-2 rounded-md flex gap-2'
                         >
-                            How it Works
+                            <Home />
+                            <div>Home</div>
+                        </Link>
+                        <Link
+                            onClick={toggle}
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className='cursor-pointer border-b-2 border-transparent hover:bg-primary hover:text-secondary items-center p-2 rounded-md flex gap-2'
+                        >
+                                <User2 />
+                                <div>Profile</div>
                         </Link>
                         <Link
                             onClick={toggle}
@@ -120,9 +90,10 @@ export const DashNavbar = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
-                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
+                            className='cursor-pointer border-b-2 border-transparent hover:bg-primary hover:text-secondary items-center p-2 rounded-md flex gap-2'
                         >
-                            Contact us
+                            <Settings />
+                            <div>Settings</div>
                         </Link>
                         <Link
                             onClick={toggle}
@@ -131,10 +102,15 @@ export const DashNavbar = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
-                            className='hover:border-b-primary cursor-pointer border-b-2 border-transparent'
+                            className='cursor-pointer border-b-2 border-transparent hover:bg-primary hover:text-secondary items-center p-2 rounded-md flex gap-2'
                         >
-                            Testimonials
+                            <Bell />
+                            <div>Notifications</div>
                         </Link>
+                        <NavLink to="/" className='border-b-2 border-transparent hover:bg-primary hover:text-secondary items-center p-2 rounded-md bg-primary text-secondary flex gap-2'>
+                            <LogOutIcon />
+                            <div>Log out</div>
+                        </NavLink>
                     </ul>
                 </div>
             )}

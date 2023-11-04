@@ -8,7 +8,7 @@ export const DashLayout = ({ children }) => {
         <div>
             <DashNavbar />  
             {children}
-            <DashFooter />
+            {/* <DashFooter /> */}
         </div>
   );
 }

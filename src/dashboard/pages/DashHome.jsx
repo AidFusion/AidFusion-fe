@@ -19,12 +19,7 @@ export const DashHome = ({sectionId}) => {
     <div className='bg-primary'>
       <DashLayout>
         <div className='text-5xl font-bold h-screen bg-white text-center justify-center items-center flex mx-4'>
-          Coming Soon!
-          {/* <Hero sectionId="hero" />
-          <About sectionId="about" />
-          <Howitworks sectionId="how-it-works" />
-          <Testimonials sectionId="testionials" />
-          <Contact sectionId="contact" /> */}
+          Coming Soon! 
         </div>
       </DashLayout>
     </div>

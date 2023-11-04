@@ -27,6 +27,7 @@ export const Navbar = () => {
                 <div className='text-xl'>AidFusion</div>
                 <div className='w-1/2'>
                     <ul className='flex flex-row justify-around'>
+                        <NavLink to="/">Home</NavLink>
                         <Link
                             activeClass="active"
                             to="about"
